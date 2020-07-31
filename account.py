@@ -128,7 +128,16 @@ class MobileMoneyAccount(Account):
             self.airtime.append(airtime)
             print("You have bought airtime worth {} on {}".format(amount,self.get_formatted_time(time)))
 
-    def pay_bill(self,)
+    def pay_bill(self,account,pay_bill):
+        self.account=account
+        self.pay_bill=pay_bill
+
+        if self.account>"Equity":
+            print("Your paybill number is {}".format(self.pay_bill))
+
+        else:
+            print("The account does not match")
+
 
     def send_money(self,amount):
         self.amount=amount
@@ -145,4 +154,9 @@ class MobileMoneyAccount(Account):
             print("You have send an amount of {}".format(amount)
 
 
-    def receive_money()
+    def receive_money(self,account_name,amount):
+        self.account_name=account_name
+        self.account=account
+        message="You have received money from {} of amount {}".format(self.account_name,self.amount)
+        print(message)
+
